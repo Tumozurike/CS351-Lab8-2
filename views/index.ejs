@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= title %></title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+<h1><%= title %></h1>
+<p>Welcome to <%= title %>.   Let's test reading get+post data</p>
+
+<br/><br/>
+<b>New Customer Form </b> to test POST request and reading data using URI  /readNameAndRespond
+<br/>
+<form action="/readCustomerInfoAndRespond" method="post">
+
+  Name: <input type="text" name="name"> </input>
+  <br/>
+  Email: <input type="text" name="email"> </input>
+  <br/>
+  <input type="submit" value="Go"/>
+</form>
+
+<br><br><br>
+<hr>
+
+<b>Form to test GET request</b> and reading the data using URI /readNameAndRespond
+<br/>
+<form action="/readNameAndRespond" method="get">
+
+  Name: <input type="text" name="name"> </input>
+  <br/>
+  <input type="submit" value="Go"/>
+</form>
+<br><br><br>
+<hr>
+<b>Form to test POST request</b> and reading data using URI  /readNameAndRespond
+<br/>
+<form action="/readNameAndRespond" method="post">
+
+  Name: <input type="text" name="name"> </input>
+  <br/>
+  <input type="submit" value="Go"/>
+</form>
+
+
+
+
+<hr>
+<section aria-labelledby="fetch-heading">
+  <h2 id="fetch-heading">Lab 8.2 — JavaScript Fetch Demo</h2>
+  <p>These forms send GET and POST requests with JavaScript fetch(), without leaving this page.</p>
+
+  <form id="fetch-get-form">
+    <label>GET name: <input name="name" required></label>
+    <button type="submit">Send GET with fetch</button>
+  </form>
+
+  <form id="fetch-post-form">
+    <label>POST name: <input name="name" required></label>
+    <button type="submit">Send POST with fetch</button>
+  </form>
+
+  <form id="fetch-customer-form">
+    <label>Customer name: <input name="name" required></label>
+    <label>Email: <input name="email" type="email" required></label>
+    <button type="submit">Send customer POST with fetch</button>
+  </form>
+
+  <p><strong>Server response:</strong></p>
+  <pre id="fetch-result" role="status" aria-live="polite">Submit a fetch form to see the response here.</pre>
+</section>
+<script src="/javascripts/fetch-demo.js" defer></script>
+
+</body>
+</html>
